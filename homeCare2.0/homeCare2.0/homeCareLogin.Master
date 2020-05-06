@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="homeCareLogin.Master.cs" Inherits="homeCare2._0.homeCare" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head style="font-family: 微軟正黑體">
+    <title>醫賴在家HomeCare</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        input[type=text], input[type=password] {
+            width: 50%;
+            padding: 10px 10px;
+            margin: 4px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 2px;
+            margin: 4px;
+            border: none;
+            cursor: pointer;
+            width: 20%;
+            border-radius:10px;
+        }
+
+            button:hover {
+                opacity: 0.8;
+                
+            }
+
+        .container {
+            padding: 12px;
+            padding-right: 60px;
+        }
+
+        span.psw {
+            float: left;
+            padding-top: 16px;
+        }
+
+
+        .fakeimg {
+            height: 200px;
+            background: #aaa;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <div class="page-header text-center" style="background-color: #000000">
+            <h1 style="color: #FFFFFF">
+                <img src="Images/LOGO2.1.png" width="100" height="100" />醫賴在家HomeCare</h1>
+            <p style="color: #FFFFFF; background-color: #000000;">
+                連結病患與醫護團隊的新橋樑
+            </p>
+
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <a class="navbar-brand" href="Home.aspx">HomeCare</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                         <li class="nav-item"><a class="nav-link" href="#" style="color: #FFFFFF">醫療新知</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color: #FFFFFF">關於我們</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color: #FFFFFF">服務項目</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" style="color: #FFFFFF">最新消息</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ContactUs.aspx" style="color: #FFFFFF">聯絡我們</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+    </asp:ContentPlaceHolder>
+
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        <form action="/action_page.php" method="post">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4" style="container">
+                        <h2>登入</h2>
+                        <label for="uname"><b>信箱</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required><br />
+
+                        <label for="psw"><b>密碼</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required><br />
+                        <button type="submit">確認</button>
+                        <span class="psw"><a href="#">忘記密碼?</a></span>
+                                               
+                    </div>
+                    <div class="col-sm-8">
+                        <h2 class="wsite-content-title" style="overflow-wrap: break-word; margin: 0px; padding: 0.5em 0px 0.2em; font-size: 28px; line-height: 48px; font-family: &quot; microsoft jhenghei&quot; , sans-serif; font-weight: bold; color: rgb(48, 48, 48); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(225, 225, 225); text-decoration-style: initial; text-decoration-color: initial;">讓HomeCare APP幫您搞定這一切吧！</h2>
+                        <h5>診後您是否曾經也有遇過以下問題?</h5>
+                        <div class="fakeimg">1.</div>
+                        <p>
+                            醫賴在家HomeCare最初的構想是來自於一位醫師的夢想, 他希望能有個類似LINE的App,可以幫助醫師輕鬆關心診療後的病患。 
+我們團隊的成立就是希望能夠結合資訊科技與醫師的專業, 研發出一套「遠距關懷諮詢服務的行動應用系統」，讓病患與醫生之間建立起一個方便且有效的溝通方式, 如圖1所示：病患能夠透過HomeCare直接諮詢專屬醫護團隊有關自己病情的一些疑問或是用藥問題; 另外, HomeCare也能協助醫生自動提醒病患診後應持續的注意事項，達到醫病之間無障礙的構通，減少病患往返醫院的不便，讓病患經由HomeCare感受有專屬的醫護團隊，在家可安心養病。
+                        </p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </asp:ContentPlaceHolder>
+
+    <asp:ContentPlaceHolder ID="Footer" runat="server">
+        <div class="jumbotron" style="margin-bottom: 0">
+            <h4>聯絡我們<br>
+                E-mail:homecare20200306@gmail.com<br>
+                Tel:
+            </h4>
+        </div>
+    </asp:ContentPlaceHolder>
+</body>
+</html>
